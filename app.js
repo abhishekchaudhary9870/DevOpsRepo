@@ -1,16 +1,17 @@
+
+
 const express = require('express');
 const app = express();
 
-app.get('/', (res, rep) => {
-    res.send('DevOps project is running');
-
+app.get('/', (req, res) => {
+  res.send('DevOps Project Running 🚀');
 });
 
-app.get('/health', (res,rep) => {
-    res.json({status:'OK'});
+app.get('/health', (req, res) => {
+  res.json({ status: 'OK' });
 });
 
 const PORT = 3000;
-app.listen(PORT,() =>{
-    console.log(`server is running on ${PORT}`);
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
